@@ -14,3 +14,7 @@ logs:
 # 環境
 db:
 	docker compose exec -it mysql mysql -u root -proot -D demo-sql
+
+# テーブルとビューの削除
+clean-db:
+	docker compose exec mysql mysql -u root -proot -D demo-sql < /clean_database.sql
